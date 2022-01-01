@@ -126,6 +126,8 @@ main {
   -webkit-transform: translate(-50%, -42%);
           transform: translate(-50%, -42%);
   z-index: 3;
+  -webkit-animation: appear 1s ease-in 0.3s backwards;
+          animation: appear 1s ease-in 0.3s backwards;
 }
 
 @media screen and (max-width: 1000px) {
@@ -160,6 +162,8 @@ main {
   -webkit-transform: translate(-50%, -53%);
           transform: translate(-50%, -53%);
   z-index: 3;
+  -webkit-animation: appear 1s ease-in 0.5s backwards;
+          animation: appear 1s ease-in 0.5s backwards;
 }
 
 @media screen and (max-width: 650px) {
@@ -785,6 +789,24 @@ main {
   }
   100% {
     background-position: -48px 0;
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=styles.css.map */

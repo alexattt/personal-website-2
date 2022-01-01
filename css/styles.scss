@@ -112,3 +112,12 @@ main {
     background-position: -48px 0;
   }
 }
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

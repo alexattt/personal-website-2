@@ -1,0 +1,137 @@
+.about {
+  min-height: 100vh;
+
+  .about-section {
+    justify-content: center;
+    font-weight: 500;
+    padding: 30vh 10vw;
+    width: 80%;
+
+    .about-title {
+      display: flex;
+      flex-direction: column;
+      font-family: $font-libre;
+      font-size: 32px;
+      text-transform: uppercase;
+      text-align: center;
+      color: $dark-blue;
+      height: auto;
+      line-height: 2.25rem;
+      overflow: hidden;
+      margin-bottom: 3vh;
+      z-index: 2;
+  
+      &::after {
+        content: '';
+        position: relative;
+        height: 5px;
+        background-image: url(../images/line-dark.svg);
+        width: 230px;
+        font-weight: bold;
+        color: $soft-red;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        animation: lineMovementBgThree 3s linear infinite forwards;
+
+        @media screen and (max-width: 500px) {
+          width: 160px;
+        }
+      }
+
+      @media screen and (max-width: 1200px) {
+        margin-top: 5vh;
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 500px) {
+        font-size: 24px;
+      }
+    }
+
+    .about-desc {
+      padding: 30px 100px 50px 100px;
+      text-align: justify;
+      line-height: 40px;
+      letter-spacing: 1px;
+
+      .accent {
+        color: $soft-red;
+      }
+
+      @media screen and (max-width: 1440px) {
+        line-height: 50px;
+        font-size: 24px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        min-height: 80vh;
+      }
+
+      @media screen and (max-width: 1000px) {
+        padding: 30px 50px;
+        font-size: 21px;
+      }
+
+      @media screen and (max-width: 650px) {
+        padding: 30px 10px 50px 10px;
+        font-size: 18px;
+        line-height: 35px;
+        letter-spacing: 0px;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      padding: 5vh 10vw;
+      min-height: 80vh;
+    }
+  }
+
+  .social-media-section {
+    justify-content: center;
+    gap: 50px;
+    padding: 0px;
+    width: 20%;
+    background-color: $dark-blue;
+
+    a {
+      display: flex;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+
+      .social-media-icon {
+        height: 80px;
+        cursor: pointer;
+
+        @media screen and (max-width: 650px) {
+          height: 40px;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 100%;
+
+        &:hover {
+          background-color: $beige;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: row;
+      align-items: center;
+      min-height: 20vh;
+      width: 100%;
+      gap: 80px;
+    }
+
+    @media screen and (max-width: 650px) {
+      gap: 30px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}

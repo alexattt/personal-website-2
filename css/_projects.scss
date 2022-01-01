@@ -1,0 +1,135 @@
+.projects {
+  justify-content: space-evenly;
+  min-height: 100vh;
+  background-color: $dark-blue;
+  padding: 50px 0px;
+
+  .projects-title {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-libre;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $beige;
+    height: auto;
+    line-height: 2.25rem;
+    overflow: hidden;
+    z-index: 2;
+
+    &::after {
+      content: '';
+      position: relative;
+      height: 5px;
+      background-image: url(../images/line-red.svg);
+      width: 230px;
+      font-weight: bold;
+      color: $soft-red;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      z-index: -1;
+      animation: lineMovementBgThree 3s linear infinite forwards;
+
+      @media screen and (max-width: 500px) {
+        width: 160px;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      font-size: 24px;
+    }
+  }
+
+  .project-images-container {
+    justify-content: center;
+    padding: 50px 0px;
+    max-width: 1440px;
+    overflow-x: hidden;
+
+    img {
+      mix-blend-mode: screen;
+      height: auto;
+    }
+
+    .project-images-one, .project-images-two {
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .projects-desc {
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 0px 10px;
+    color: $beige;
+
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      color: $soft-red;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        font-style: italic;
+      }
+    }
+  }
+
+  .project {
+    position: relative;
+  }
+
+  .project img {
+    width: 100%;
+    vertical-align: top;
+    cursor: pointer;
+  }
+
+  .project:after {
+    white-space: pre;
+    word-wrap: break-word;
+    color: $beige;
+    font-weight: 300;
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    top: 0%; 
+    left: 0%;
+    text-align: center;
+    line-height: 40px;
+    padding-top: 20%;
+    background: rgba(22, 28, 46, 0.8);
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .project:hover:after {
+    opacity: 1;
+  }
+
+  .project:active:after {
+    opacity: 1;
+  }
+
+  .project-one:after {
+    content:'Autonomous Car Project \A .NET C#, Unity, Blender';
+  }
+
+  .project-two:after {
+    content:'Bill splitter app (Frontendmentor challenge) \A HTML, SCSS, JavaScript';
+  }
+
+  .project-three:after {
+    content:'Sunnyside agency landing page \A (Frontendmentor challenge) \A HTML, SCSS, JavaScript';
+    padding-top: 15%;
+  }
+
+  .project-four:after {
+    content:'Time tracking dashboard \A (Frontendmentor challenge) \A React, SCSS';
+    padding-top: 14%;
+  }
+}

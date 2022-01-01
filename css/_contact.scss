@@ -1,0 +1,106 @@
+.contact-section {
+  min-height: 90vh;
+  padding: 50px 0px;
+  background-color: $dark-blue;
+
+  .contact-title {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-libre;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $beige;
+    height: auto;
+    line-height: 2.25rem;
+    overflow: hidden;
+    margin-bottom: 3vh;
+    z-index: 2;
+
+    &::after {
+      content: '';
+      position: relative;
+      height: 5px;
+      background-image: url(../images/line-red.svg);
+      width: 340px;
+      font-weight: bold;
+      color: $soft-red;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      animation: lineMovementBgThree 3s linear infinite forwards;
+
+      @media screen and (max-width: 500px) {
+        width: 250px;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      font-size: 24px;
+    }
+  }
+
+  .contact-form-container {
+    margin-top: 10vh;
+    align-items: center;
+
+    form {
+      justify-content: center;
+      align-items: center;
+
+      input, textarea {
+        width: 50vw;
+        outline: none;
+        border: 3px dashed $beige;
+        background-color: $beige;
+        font-size: 21px;
+        font-family: $font-roboto;
+        color: $dark-blue;
+        margin-bottom: 2vh;
+        transition: all 0.1s ease-in-out;
+
+        &::placeholder {
+          font-family: $font-roboto;
+          font-style: italic;
+        }
+
+        &:focus {
+          border: 3px dashed $soft-red;
+        }
+
+        @media screen and (max-width: 650px) {
+          width: 80vw;
+        }
+      }
+
+      input {
+        max-width: 750px;
+        height: 50px;
+        padding-left: 20px;
+      }
+      
+      textarea {
+        max-width: 750px;
+        padding: 20px;
+      }
+
+      .submit-btn {
+        display: block;
+        border: none;
+        align-content: center;
+        padding-left: 0px;
+        margin-bottom: 0vh;
+        min-width: 100px;
+        max-width: 165px;
+        background-color: $soft-red;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+          transform: skewX(-10deg);
+        }
+      }
+    }
+  }
+}

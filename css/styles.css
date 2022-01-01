@@ -223,6 +223,12 @@ main {
           animation: lineMovementBg 0.5s linear infinite forwards;
 }
 
+@media screen and (max-width: 768px) {
+  .header .lines .line-3 {
+    margin-top: 47vh;
+  }
+}
+
 .projects {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -430,6 +436,13 @@ main {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .about .about-section .about-title {
+    margin-top: 5vh;
+    font-size: 24px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .about .about-section .about-title {
     font-size: 24px;
@@ -480,6 +493,7 @@ main {
   .about .about-section {
     width: 100%;
     padding: 5vh 10vw;
+    min-height: 80vh;
   }
 }
 

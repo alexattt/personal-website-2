@@ -75,6 +75,7 @@ main {
   .header-square {
     position: absolute;
     height: 35vh;
+    min-height: 320px;
     width: 685px;
     background-color: #161C2E;
     top: 45%;
@@ -308,6 +309,10 @@ main {
   }
 
   .project:hover:after {
+    opacity: 1;
+  }
+
+  .project:active:after {
     opacity: 1;
   }
 
@@ -614,6 +619,3 @@ main {
     background-position: -48px 0;
   }
 }
-
-
-// mobile breakpoint - 767/768px

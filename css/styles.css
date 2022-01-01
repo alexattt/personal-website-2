@@ -149,11 +149,12 @@ main {
 .header .desc {
   position: absolute;
   font-weight: 100;
-  font-size: 24px;
+  font-size: 21px;
   font-style: italic;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
   color: #FAF7F2;
+  margin-top: 10px;
   top: 53%;
   left: 50%;
   -webkit-transform: translate(-50%, -53%);

@@ -126,11 +126,12 @@ main {
   .desc {
     position: absolute;
     font-weight: 100;
-    font-size: 24px;
+    font-size: 21px;
     font-style: italic;
     text-align: center;
-    line-height: 40px;
+    line-height: 30px;
     color: $beige;
+    margin-top: 10px;
     top: 53%;
     left: 50%;
     transform: translate(-50%, -53%);

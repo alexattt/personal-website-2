@@ -26,6 +26,7 @@ $font-roboto: 'Roboto', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 /* Remove default margin */
@@ -88,6 +89,7 @@ main {
 
   .logo {
     height: 50px;
+    cursor: pointer;
   }
 }
 
